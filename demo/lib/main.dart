@@ -97,19 +97,29 @@ class _MyHomePageState extends State<MyHomePage> {
           // Center(
           //   child: Text('Hello World!!!!', style: TextStyle(fontSize: 25)),
           // ),
-          Center(
-            child: Container(
-              width: 300,
-              height: 100,
-              color: Colors.blueAccent,
-              child: Center(
-                child: Text(
-                  'This center of Container',
-                  style: TextStyle(color: Colors.black87, fontSize: 20),
-                ),
-              ),
-            ),
-          ),
+          // Center(
+          //   child: Container(
+          //     width: 300,
+          //     height: 100,
+          //     color: Colors.blueAccent,
+          //     child: Center(
+          //       child: Text(
+          //         'This center of Container',
+          //         style: TextStyle(color: Colors.black87, fontSize: 20),
+          //       ),
+          //     ),
+          //   ),
+          // ),
+          // Text(
+          //   "Hello world",
+          //   style: TextStyle(
+          //     fontSize: 20,
+          //     color: Colors.purple,
+          //     fontWeight: FontWeight.bold,
+          //     backgroundColor: Colors.black,
+          //   ),
+          // ),
+          
     );
   }
 }
