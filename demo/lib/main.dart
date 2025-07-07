@@ -119,6 +119,32 @@ class _MyHomePageState extends State<MyHomePage> {
           //     backgroundColor: Colors.black,
           //   ),
           // ),
+          //types of button
+          //1.Text Button(Flat Button)
+          //2.Elevated Button(Raised Button)
+          //3.Outlined Button
+          // TextButton(
+          //   child: Text("Click here!!"),
+          //   onPressed: () {
+          //     print("text Button");
+          //   },
+          //   onLongPress: () {
+          //     print("long pressed");
+          //   },
+          // ),
+          // ElevatedButton(
+          //   child: Text("Elevated Button"),
+          //   onPressed: () {
+          //     print("Elevated Button");
+          //   },
+          // ),
+          // OutlinedButton(
+          //   child: Text("Outlined Button"),
+          //   onPressed: () {
+          //     print("On Pressed on outline Button");
+          //   },
+          // ),
+          //how to import image
           
     );
   }
