@@ -83,75 +83,40 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Flutter Container'),
+        title: Text(widget.title),
       ),
-      // body: Center(
-      //   child: Container(
-      //     width: 1000,
-      //     height: 100,
-      //     color: Colors.lightBlue,
-      //     child: Text('Hello world'),
-      //   ),
-      // ),
-      body:
-          // Center(
-          //   child: Text('Hello World!!!!', style: TextStyle(fontSize: 25)),
-          // ),
-          // Center(
-          //   child: Container(
-          //     width: 300,
-          //     height: 100,
-          //     color: Colors.blueAccent,
-          //     child: Center(
-          //       child: Text(
-          //         'This center of Container',
-          //         style: TextStyle(color: Colors.black87, fontSize: 20),
-          //       ),
-          //     ),
-          //   ),
-          // ),
-          // Text(
-          //   "Hello world",
-          //   style: TextStyle(
-          //     fontSize: 20,
-          //     color: Colors.purple,
-          //     fontWeight: FontWeight.bold,
-          //     backgroundColor: Colors.black,
-          //   ),
-          // ),
-          //types of button
-          //1.Text Button(Flat Button)
-          //2.Elevated Button(Raised Button)
-          //3.Outlined Button
-          // TextButton(
-          //   child: Text("Click here!!"),
-          //   onPressed: () {
-          //     print("text Button");
-          //   },
-          //   onLongPress: () {
-          //     print("long pressed");
-          //   },
-          // ),
-          // ElevatedButton(
-          //   child: Text("Elevated Button"),
-          //   onPressed: () {
-          //     print("Elevated Button");
-          //   },
-          // ),
-          // OutlinedButton(
-          //   child: Text("Outlined Button"),
-          //   onPressed: () {
-          //     print("On Pressed on outline Button");
-          //   },
-          // ),
-          //how to import image
-          Center(
-            child: Container(
-              width: 100,
-              height: 100,
-              child: Image.asset('assets/images/1.jpg'),
+      body: Center(
+        // Center is a layout widget. It takes a single child and positions it
+        // in the middle of the parent.
+        child: Column(
+          // Column is also a layout widget. It takes a list of children and
+          // arranges them vertically. By default, it sizes itself to fit its
+          // children horizontally, and tries to be as tall as its parent.
+          //
+          // Column has various properties to control how it sizes itself and
+          // how it positions its children. Here we use mainAxisAlignment to
+          // center the children vertically; the main axis here is the vertical
+          // axis because Columns are vertical (the cross axis would be
+          // horizontal).
+          //
+          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
+          // action in the IDE, or press "p" in the console), to see the
+          // wireframe for each widget.
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text('You have pushed the button this many times:'),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
-          ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
