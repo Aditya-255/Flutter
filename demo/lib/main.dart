@@ -145,13 +145,14 @@ class _MyHomePageState extends State<MyHomePage> {
           //   },
           // ),
           //how to import image
-          Center(
-            child: Container(
-              width: 100,
-              height: 100,
-              child: Image.asset('assets/images/1.jpg'),
-            ),
-          ),
+          // Center(
+          //   child: Container(
+          //     width: 100,
+          //     height: 100,
+          //     child: Image.asset('assets/images/1.jpg'),
+          //   ),
+          // ),
+          
     );
   }
 }
