@@ -152,7 +152,19 @@ class _MyHomePageState extends State<MyHomePage> {
           //     child: Image.asset('assets/images/1.jpg'),
           //   ),
           // ),
-          
+          Container(
+            width:300,
+            child:Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              // crossAxisAlignment: ,
+              children: [
+                Text("A"),
+                Text("B"),
+                Text("C"),
+                ElevatedButton(onPressed: () {}, child: Text("Click")),
+              ],
+            ),
+          )
     );
   }
 }
