@@ -222,12 +222,12 @@ class _MyHomePageState extends State<MyHomePage> {
           //   ),
           // ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(5.0),
             child: SingleChildScrollView(
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(5.0),
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
