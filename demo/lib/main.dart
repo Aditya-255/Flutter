@@ -153,8 +153,8 @@ class _MyHomePageState extends State<MyHomePage> {
           //   ),
           // ),
           Container(
-            width:300,
-            child:Row(
+            width: 300,
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               // crossAxisAlignment: ,
               children: [
@@ -164,7 +164,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ElevatedButton(onPressed: () {}, child: Text("Click")),
               ],
             ),
-          )
+          ),
     );
   }
 }
