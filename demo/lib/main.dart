@@ -152,19 +152,77 @@ class _MyHomePageState extends State<MyHomePage> {
           //     child: Image.asset('assets/images/1.jpg'),
           //   ),
           // ),
-          Container(
-            width: 300,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              // crossAxisAlignment: ,
-              children: [
-                Text("A"),
-                Text("B"),
-                Text("C"),
-                ElevatedButton(onPressed: () {}, child: Text("Click")),
-              ],
-            ),
-          ),
+          // Container(
+          //   height: 300,
+          //   // width: 300,
+          //   // child: Row(
+          //   //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //   //   crossAxisAlignment: CrossAxisAlignment.center,
+          //   //   children: [
+          //   //     Text("A"),
+          //   //     Text("B"),
+          //   //     Text("C"),
+          //   //     ElevatedButton(onPressed: () {}, child: Text("Click")),
+          //   //   ],
+          //   // ),
+          //   child: Column(
+          //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //     crossAxisAlignment: CrossAxisAlignment.start,
+          //     children: [
+          //       Row(
+          //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //         crossAxisAlignment: CrossAxisAlignment.center,
+          //         children: [
+          //           Column(
+          //             children: [
+          //               ElevatedButton(onPressed: () {}, child: Text("Click!")),
+          //               ElevatedButton(onPressed: () {}, child: Text("Clickk")),
+          //             ],
+          //           ),
+          //           Text("AA", style: TextStyle(fontSize: 20)),
+          //           Text("BB", style: TextStyle(fontSize: 20)),
+          //           Text("CC", style: TextStyle(fontSize: 20)),
+          //           Text("DD", style: TextStyle(fontSize: 20)),
+          //         ],
+          //       ),
+          //       Text("A", style: TextStyle(fontSize: 20)),
+          //       Text("B", style: TextStyle(fontSize: 20)),
+          //       Text("C", style: TextStyle(fontSize: 20)),
+          //       Text("D", style: TextStyle(fontSize: 20)),
+          //       ElevatedButton(onPressed: () {}, child: Text("Click")),
+          //     ],
+          //   ),
+          // ),
+          //Inkwell widget
+          // Center(
+          //   child: InkWell(
+          //     onTap: () {
+          //       print("on Tap");
+          //     },
+          //     onLongPress: () {
+          //       print("on Long Press");
+          //     },
+          //     onDoubleTap: () {
+          //       print("on Double Tap");
+          //     },
+          //     child: Container(
+          //       width: 200,
+          //       height: 200,
+          //       color: Colors.amber,
+          //       child: InkWell(
+          //         onTap: () {
+          //           print("Click the click here text");
+          //         },
+          //         child: Text(
+          //           "Click Here",
+          //           style: TextStyle(fontSize: 25, color: Colors.black87),
+          //         ),
+          //       ),
+          //     ),
+          //   ),
+          // ),
+
+           
     );
   }
 }
