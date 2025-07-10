@@ -221,8 +221,61 @@ class _MyHomePageState extends State<MyHomePage> {
           //     ),
           //   ),
           // ),
-
-           
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.all(11),
+                            height: 200,
+                            width: 200,
+                            color: Colors.green,
+                          ),
+                          Container(
+                            margin: EdgeInsets.all(11),
+                            height: 200,
+                            width: 200,
+                            color: Colors.orange,
+                          ),
+                          Container(
+                            margin: EdgeInsets.all(11),
+                            height: 200,
+                            width: 200,
+                            color: Colors.purple,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(11),
+                    height: 200,
+                    // width: 200,
+                    color: Colors.amber,
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(11),
+                    height: 200,
+                    // width: 200,
+                    color: Colors.pinkAccent,
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(11),
+                    height: 200,
+                    // width: 200,
+                    color: Colors.lightBlue,
+                  ),
+                ],
+              ),
+            ),
+          ),
     );
   }
 }
