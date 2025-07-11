@@ -69,6 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    var arrName = ["abcd", "efgh", "ijkl", " vbdbnb", "kncjkda", "ksdsgc"];
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
@@ -221,61 +222,141 @@ class _MyHomePageState extends State<MyHomePage> {
           //     ),
           //   ),
           // ),
-          Padding(
-            padding: const EdgeInsets.all(5.0),
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(5.0),
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.all(11),
-                            height: 200,
-                            width: 200,
-                            color: Colors.green,
-                          ),
-                          Container(
-                            margin: EdgeInsets.all(11),
-                            height: 200,
-                            width: 200,
-                            color: Colors.orange,
-                          ),
-                          Container(
-                            margin: EdgeInsets.all(11),
-                            height: 200,
-                            width: 200,
-                            color: Colors.purple,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.all(11),
-                    height: 200,
-                    // width: 200,
-                    color: Colors.amber,
-                  ),
-                  Container(
-                    margin: EdgeInsets.all(11),
-                    height: 200,
-                    // width: 200,
-                    color: Colors.pinkAccent,
-                  ),
-                  Container(
-                    margin: EdgeInsets.all(11),
-                    height: 200,
-                    // width: 200,
-                    color: Colors.lightBlue,
-                  ),
-                ],
-              ),
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.all(5.0),
+          //   child: SingleChildScrollView(
+          //     child: Column(
+          //       children: [
+          //         Padding(
+          //           padding: const EdgeInsets.all(5.0),
+          //           child: SingleChildScrollView(
+          //             scrollDirection: Axis.horizontal,
+          //             child: Row(
+          //               children: [
+          //                 Container(
+          //                   margin: EdgeInsets.all(11),
+          //                   height: 200,
+          //                   width: 200,
+          //                   color: Colors.green,
+          //                 ),
+          //                 Container(
+          //                   margin: EdgeInsets.all(11),
+          //                   height: 200,
+          //                   width: 200,
+          //                   color: Colors.orange,
+          //                 ),
+          //                 Container(
+          //                   margin: EdgeInsets.all(11),
+          //                   height: 200,
+          //                   width: 200,
+          //                   color: Colors.purple,
+          //                 ),
+          //               ],
+          //             ),
+          //           ),
+          //         ),
+          //         Container(
+          //           margin: EdgeInsets.all(11),
+          //           height: 200,
+          //           // width: 200,
+          //           color: Colors.amber,
+          //         ),
+          //         Container(
+          //           margin: EdgeInsets.all(11),
+          //           height: 200,
+          //           // width: 200,
+          //           color: Colors.pinkAccent,
+          //         ),
+          //         Container(
+          //           margin: EdgeInsets.all(11),
+          //           height: 200,
+          //           // width: 200,
+          //           color: Colors.lightBlue,
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
+          // ListView(
+          //   scrollDirection: Axis.horizontal,
+          //   reverse: true,
+          //   children: [
+          //     Padding(
+          //       padding: const EdgeInsets.all(8.0),
+          //       child: Text("Helloo"),
+          //     ),
+          //     Padding(
+          //       padding: const EdgeInsets.all(8.0),
+          //       child: Text("Hellooo"),
+          //     ),
+          //     Padding(
+          //       padding: const EdgeInsets.all(8.0),
+          //       child: Text("Helloooo"),
+          //     ),
+          //   ],
+          // ),
+          // ListView.builder(
+          //   itemBuilder: (context, index) {
+          //     return Text(
+          //       arrName[index],
+          //       style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+          //     );
+          //   },
+          //   itemCount: arrName.length,
+          //   scrollDirection: Axis.horizontal,
+          //   itemExtent: 100,
+          // ),
+          // ListView.separated(
+          //   itemBuilder: (context, index) {
+          //     return Row(
+          //       children: [
+          //         Padding(
+          //           padding: const EdgeInsets.all(8.0),
+          //           child: Column(
+          //             children: [
+          //               Text(
+          //                 arrName[index],
+          //                 style: TextStyle(
+          //                   fontSize: 10,
+          //                   fontWeight: FontWeight.bold,
+          //                 ),
+          //               ),
+          //               Padding(
+          //                 padding: const EdgeInsets.all(8.0),
+          //                 child: Text(
+          //                   arrName[index],
+          //                   style: TextStyle(
+          //                     fontSize: 10,
+          //                     fontWeight: FontWeight.bold,
+          //                   ),
+          //                 ),
+          //               ),
+          //             ],
+          //           ),
+          //         ),
+
+          //         Padding(
+          //           padding: const EdgeInsets.all(8.0),
+          //           child: Text(
+          //             arrName[index],
+          //             style: TextStyle(
+          //               fontSize: 10,
+          //               fontWeight: FontWeight.bold,
+          //             ),
+          //           ),
+          //         ),
+          //       ],
+          //     );
+          //   },
+          //   itemCount: arrName.length,
+          //   // scrollDirection: Axis.horizontal,
+          //   separatorBuilder: (context, index) {
+          //     return Divider(height: 100, thickness: 4);
+          //   },
+          // ),
+          Container(
+            
+          )
     );
   }
 }
