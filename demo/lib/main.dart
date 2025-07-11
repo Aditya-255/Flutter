@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(const MyApp());
@@ -334,7 +335,6 @@ class _MyHomePageState extends State<MyHomePage> {
           //             ],
           //           ),
           //         ),
-
           //         Padding(
           //           padding: const EdgeInsets.all(8.0),
           //           child: Text(
@@ -354,9 +354,57 @@ class _MyHomePageState extends State<MyHomePage> {
           //     return Divider(height: 100, thickness: 4);
           //   },
           // ),
-          Container(
-            
-          )
+          // Container(
+          //   width: double.infinity,
+          //   height: double.infinity,
+          //   color: Colors.blue.shade50,
+          //   child: Center(
+          //     child: Container(
+          //       width: 150,
+          //       height: 150,
+          //       // color: Colors.black,
+          //       decoration: BoxDecoration(
+          //         color: Colors.black,
+          //         // borderRadius: BorderRadius.circular(21),
+          //         // borderRadius: BorderRadius.only(
+          //         //   topLeft: Radius.circular(31),
+          //         //   // topRight: Radius.circular(11),
+          //         //   bottomLeft: Radius.circular(31),
+          //         // ),
+          //         border: Border.all(width: 5),
+          //         boxShadow: [
+          //           BoxShadow(
+          //             blurRadius: 11,
+          //             color: Colors.red,
+          //             spreadRadius: 11,
+          //           ),
+          //         ],
+          //         shape: BoxShape.circle,
+          //       ),
+          //     ),
+          //   ),
+          // ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                flex: 2,
+                child: Container(width: 50, height: 100, color: Colors.red),
+              ),
+              Expanded(
+                flex: 4,
+                child: Container(height: 100, width: 50, color: Colors.blue),
+              ),
+              Expanded(
+                flex: 3,
+                child: Container(width: 50, height: 100, color: Colors.amber),
+              ),
+              Expanded(
+                // flex: 1,
+                child: Container(width: 50, height: 100, color: Colors.purple),
+              ),
+            ],
+          ),
     );
   }
 }
