@@ -6,6 +6,7 @@ import 'login_page.dart';
 void main() {
   runApp(const MyApp());
 }
+
 // design product card which contains image of product name of
 // it actual price and current and current price
 class MyApp extends StatelessWidget {
