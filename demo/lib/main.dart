@@ -384,26 +384,45 @@ class _MyHomePageState extends State<MyHomePage> {
           //     ),
           //   ),
           // ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Expanded(
-                flex: 2,
-                child: Container(width: 50, height: 100, color: Colors.red),
-              ),
-              Expanded(
-                flex: 4,
-                child: Container(height: 100, width: 50, color: Colors.blue),
-              ),
-              Expanded(
-                flex: 3,
-                child: Container(width: 50, height: 100, color: Colors.amber),
-              ),
-              Expanded(
-                // flex: 1,
-                child: Container(width: 50, height: 100, color: Colors.purple),
-              ),
-            ],
+          // Column(
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   children: [
+          //     Expanded(
+          //       flex: 2,
+          //       child: Container(width: 50, height: 100, color: Colors.red),
+          //     ),
+          //     Expanded(
+          //       flex: 4,
+          //       child: Container(height: 100, width: 50, color: Colors.blue),
+          //     ),
+          //     Expanded(
+          //       flex: 3,
+          //       child: Container(width: 50, height: 100, color: Colors.amber),
+          //     ),
+          //     Expanded(
+          //       // flex: 1,
+          //       child: Container(width: 50, height: 100, color: Colors.purple),
+          //     ),
+          //   ],
+          // ),
+          // Padding(
+          //   padding: EdgeInsets.all(8.0),
+          //   child: Text("hello world", style: TextStyle(fontSize: 25)),
+          // ),
+          ListView.separated(
+            itemBuilder: (context, index) {
+              return ListTile(
+                leading: Text("${index + 1}"),
+                title: Text(arrName[index]),
+                subtitle: Text("number"),
+                trailing: Icon(Icons.add),
+              );
+            },
+            itemCount: arrName.length,
+            // scrollDirection: Axis.horizontal,
+            separatorBuilder: (context, index) {
+              return Divider(height: 20, thickness: 4);
+            },
           ),
     );
   }
