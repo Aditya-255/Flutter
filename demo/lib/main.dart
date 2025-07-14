@@ -409,21 +409,54 @@ class _MyHomePageState extends State<MyHomePage> {
           //   padding: EdgeInsets.all(8.0),
           //   child: Text("hello world", style: TextStyle(fontSize: 25)),
           // ),
-          ListView.separated(
-            itemBuilder: (context, index) {
-              return ListTile(
-                leading: Text("${index + 1}"),
-                title: Text(arrName[index]),
-                subtitle: Text("number"),
-                trailing: Icon(Icons.add),
-              );
-            },
-            itemCount: arrName.length,
-            // scrollDirection: Axis.horizontal,
-            separatorBuilder: (context, index) {
-              return Divider(height: 20, thickness: 4);
-            },
+          // ListView.separated(
+          //   itemBuilder: (context, index) {
+          //     return ListTile(
+          //       leading: CircleAvatar(
+          //         backgroundImage: AssetImage('assets/images/1.jpg'),
+          //         // backgroundColor: Colors.transparent,
+          //         radius: 20,
+          //       ),
+          //       title: Text(arrName[index]),
+          //       subtitle: Text("number"),
+          //       trailing: Icon(Icons.add),
+          //     );
+          //   },
+          //   itemCount: arrName.length,
+          //   // scrollDirection: Axis.horizontal,
+          //   separatorBuilder: (context, index) {
+          //     return Divider(height: 20, thickness: 4);
+          //   },
+          // ),
+          Center(
+            child:
+                // Container(
+                // width: 100,
+                // height: 100,
+                // color: Colors.red,
+                // child:
+                CircleAvatar(
+                  child: Container(
+                    width: 60,
+                    height: 60,
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 30,
+                          height: 30,
+                          child: Image.asset('assets/images/1.jpg'),
+                        ),
+                        Text("image"),
+                      ],
+                    ),
+                  ),
+                  // Text('Name', style: TextStyle(color: Colors.amber)),
+                  // backgroundImage: AssetImage('assets/images/1.jpg'),
+                  // backgroundColor: Colors.transparent,
+                  radius: 50,
+                ),
           ),
     );
+    // );
   }
 }
