@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_nv/flutterexp/columnexp.dart';
 import 'package:flutter_nv/flutterexp/conexp.dart';
 
 void main() {
@@ -15,8 +16,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Containercontain(),
+      home: Scaffold(
+        body:
+            // Containercontain()
+            Colcontain(),
+      ),
     );
   }
 }
-
