@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Colcontain extends StatelessWidget {
-  const Colcontain({super.key});
+class calculator extends StatelessWidget {
+  const calculator({super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,6 +17,22 @@ class Colcontain extends StatelessWidget {
             Text(
               "welocome to column exp",
               style: TextStyle(color: Colors.black),
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: ElevatedButton(onPressed: null, child: Text("A")),
+                ),
+                Expanded(
+                  child: ElevatedButton(onPressed: null, child: Text("A")),
+                ),
+                Expanded(
+                  child: ElevatedButton(onPressed: null, child: Text("A")),
+                ),
+                Expanded(
+                  child: ElevatedButton(onPressed: null, child: Text("A")),
+                ),
+              ],
             ),
           ],
         ),
