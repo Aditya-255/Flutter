@@ -5,7 +5,9 @@ class Containercontain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Center(child: Container(color: Colors.amber)),
+      child: Center(
+        child: Container(color: Colors.amber, child: Text("Hello world!!")),
+      ),
     );
   }
 }
