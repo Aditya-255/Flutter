@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class calculator extends StatelessWidget {
-  const calculator({super.key});
+  calculator({super.key});
+  final TextEditingController _controller = TextEditingController(text: '0');
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -12,15 +13,40 @@ class calculator extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(height: 235, width: 250),
+            SizedBox(height: 10),
+            Container(
+              height: 100,
+              width: 200,
+              child: Container(
+                child: Text(
+                  "Calculator",
+                  style: TextStyle(color: Colors.white, fontSize: 40),
+                ),
+              ),
+            ),
+            Container(
+              height: 126,
+              // color: Colors.amber,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: TextField(
+                        controller: _controller,
+                        textAlign: TextAlign.right,
+                        decoration: InputDecoration(border: InputBorder.none),
+                        style: TextStyle(color: Colors.white, fontSize: 50),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
             rowcontain(),
             SizedBox(height: 20),
-            Divider(
-              color: Colors.grey,
-              thickness: 3,
-              indent: 10,
-              endIndent: 10,
-            ),
+            Divider(color: Colors.grey, thickness: 3, indent: 5, endIndent: 5),
             SizedBox(height: 20),
             Container(
               height: 450,
@@ -106,7 +132,7 @@ class calculator extends StatelessWidget {
               ),
               child: Text(
                 "=",
-                style: TextStyle(color: Colors.white, fontSize: 30),
+                style: TextStyle(color: Colors.black, fontSize: 35),
               ),
             ),
           ),
@@ -175,10 +201,7 @@ class calculator extends StatelessWidget {
                 shape: CircleBorder(),
                 backgroundColor: Colors.grey,
               ),
-              child: Text(
-                "+",
-                style: TextStyle(color: Colors.white, fontSize: 30),
-              ),
+              child: Icon(Icons.add, size: 35, color: Colors.black),
             ),
           ),
         ),
@@ -246,10 +269,7 @@ class calculator extends StatelessWidget {
                 shape: CircleBorder(),
                 backgroundColor: Colors.grey,
               ),
-              child: Text(
-                "-",
-                style: TextStyle(color: Colors.white, fontSize: 30),
-              ),
+              child: Icon(Icons.remove, size: 35, color: Colors.black),
             ),
           ),
         ),
@@ -317,7 +337,7 @@ Row row1contain() {
             ),
             child: Text(
               "/",
-              style: TextStyle(color: Colors.black, fontSize: 30),
+              style: TextStyle(fontSize: 45, color: Colors.black),
             ),
           ),
         ),
@@ -329,55 +349,52 @@ Row row1contain() {
 Row rowcontain() {
   return Row(
     children: [
-      Expanded(
-        child: SizedBox(
-          height: 60,
-          child: ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.grey, // set background color
-            ),
-            child: Text("A", style: TextStyle(color: Colors.white)),
+      SizedBox(
+        height: 50,
+        width: 50,
+        child: ElevatedButton(
+          onPressed: () {},
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.grey, // set background color
           ),
+          child: Text("A", style: TextStyle(color: Colors.white)),
+        ),
+      ),
+
+      SizedBox(width: 10),
+      SizedBox(
+        height: 50,
+        width: 50,
+        child: ElevatedButton(
+          onPressed: () {},
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.grey, // set background color
+          ),
+          child: Text("A", style: TextStyle(color: Colors.white)),
         ),
       ),
       SizedBox(width: 10),
-      Expanded(
-        child: SizedBox(
-          height: 60,
-          child: ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.grey, // set background color
-            ),
-            child: Text("A", style: TextStyle(color: Colors.white)),
+      SizedBox(
+        height: 50,
+        width: 50,
+        child: ElevatedButton(
+          onPressed: () {},
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.grey, // set background color
           ),
+          child: Text("A", style: TextStyle(color: Colors.white)),
         ),
       ),
-      SizedBox(width: 10),
-      Expanded(
-        child: SizedBox(
-          height: 60,
-          child: ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.grey, // set background color
-            ),
-            child: Text("A", style: TextStyle(color: Colors.white)),
+      SizedBox(width: 110),
+      SizedBox(
+        height: 60,
+        width: 60,
+        child: ElevatedButton(
+          onPressed: () {},
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.black, // set background color
           ),
-        ),
-      ),
-      SizedBox(width: 10),
-      Expanded(
-        child: SizedBox(
-          height: 60,
-          child: ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.grey, // set background color
-            ),
-            child: Text("A", style: TextStyle(color: Colors.white)),
-          ),
+          child: Icon(Icons.backspace, size: 25, color: Colors.white),
         ),
       ),
     ],
@@ -444,10 +461,7 @@ Row row2contain() {
               shape: CircleBorder(),
               backgroundColor: Colors.grey,
             ),
-            child: Text(
-              "X",
-              style: TextStyle(color: Colors.white, fontSize: 30),
-            ),
+            child: Icon(Icons.close, size: 35, color: Colors.black),
           ),
         ),
       ),
