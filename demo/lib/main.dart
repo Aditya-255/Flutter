@@ -424,27 +424,45 @@ class _MyHomePageState extends State<MyHomePage> {
           //         radius: 50,
           //       ),
           // ),
-          Column(
-            children: [
-              Text(
-                "hello world",
-                style: Theme.of(
-                  context,
-                ).textTheme.headlineSmall!.copyWith(color: Colors.red),
+          // Column(
+          //   children: [
+          //     Text(
+          //       "hello world",
+          //       style: Theme.of(
+          //         context,
+          //       ).textTheme.headlineSmall!.copyWith(color: Colors.red),
+          //     ),
+          //     Text(
+          //       "hello world!!!!",
+          //       style: Theme.of(context).textTheme.headlineSmall,
+          //     ),
+          //     Text(
+          //       "hello world",
+          //       style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          //     ),
+          //     Text(
+          //       "hello world",
+          //       style: TextStyle(fontSize: 09, fontWeight: FontWeight.w400),
+          //     ),
+          //   ],
+          // ),
+          // Center(
+          //   child: Card(
+          //     shadowColor: Colors.blue,
+          //     elevation: 15,
+          //     child: Padding(
+          //       padding: const EdgeInsets.all(8.0),
+          //       child: Text("hello world", style: TextStyle(fontSize: 30)),
+          //     ),
+          //   ),
+          // ),
+          Center(
+            child: Container(
+              width: 300,
+              child: TextField(
+                decoration: InputDecoration(border: OutlineInputBorder()),
               ),
-              Text(
-                "hello world!!!!",
-                style: Theme.of(context).textTheme.headlineSmall,
-              ),
-              Text(
-                "hello world",
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-              ),
-              Text(
-                "hello world",
-                style: TextStyle(fontSize: 09, fontWeight: FontWeight.w400),
-              ),
-            ],
+            ),
           ),
     );
     // );

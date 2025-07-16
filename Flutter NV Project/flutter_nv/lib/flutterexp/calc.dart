@@ -36,7 +36,9 @@ class calculator extends StatelessWidget {
                       child: TextField(
                         controller: _controller,
                         textAlign: TextAlign.right,
-                        decoration: InputDecoration(border: InputBorder.none),
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                        ),
                         style: TextStyle(color: Colors.white, fontSize: 50),
                       ),
                     ),
