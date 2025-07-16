@@ -49,6 +49,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    var emailText = TextEditingController();
+    var password = TextEditingController();
     var arrName = ["abcd", "efgh", "ijkl", " vbdbnb", "kncjkda", "ksdsgc"];
     return Scaffold(
       appBar: AppBar(
@@ -459,8 +461,56 @@ class _MyHomePageState extends State<MyHomePage> {
           Center(
             child: Container(
               width: 300,
-              child: TextField(
-                decoration: InputDecoration(border: OutlineInputBorder()),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextField(
+                    // keyboardType: TextInputType.phone,
+                    controller: emailText,
+                    // enabled: false,
+                    decoration: InputDecoration(
+                      hintText: "Enter Email",
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide(color: Colors.deepOrange),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: BorderSide(color: Colors.blue),
+                      ),
+                      disabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: BorderSide(color: Colors.blueAccent),
+                      ),
+                      // suffixText: "username exits",
+                      suffixIcon: IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.remove_red_eye, color: Colors.red),
+                      ),
+                      prefixIcon: Icon(Icons.email, color: Colors.red),
+                    ),
+                  ),
+                  Container(height: 20),
+                  TextField(
+                    controller: password,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      hintText: "Enter Password",
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: BorderSide(color: Colors.black),
+                      ),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      String uemail = emailText.text.toString();
+                      String upass = password.text;
+                      print("Email:$uemail,password:$upass");
+                    },
+                    child: Text("Login"),
+                  ),
+                ],
               ),
             ),
           ),
