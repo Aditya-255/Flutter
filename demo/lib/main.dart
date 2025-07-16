@@ -51,6 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     var emailText = TextEditingController();
     var password = TextEditingController();
+    var time = DateTime.now();
     var arrName = ["abcd", "efgh", "ijkl", " vbdbnb", "kncjkda", "ksdsgc"];
     return Scaffold(
       appBar: AppBar(
@@ -458,57 +459,79 @@ class _MyHomePageState extends State<MyHomePage> {
           //     ),
           //   ),
           // ),
+          // Center(
+          //   child: Container(
+          //     width: 300,
+          //     child: Column(
+          //       mainAxisAlignment: MainAxisAlignment.center,
+          //       children: [
+          //         TextField(
+          //           // keyboardType: TextInputType.phone,
+          //           controller: emailText,
+          //           // enabled: false,
+          //           decoration: InputDecoration(
+          //             hintText: "Enter Email",
+          //             focusedBorder: OutlineInputBorder(
+          //               borderRadius: BorderRadius.circular(20),
+          //               borderSide: BorderSide(color: Colors.deepOrange),
+          //             ),
+          //             enabledBorder: OutlineInputBorder(
+          //               borderRadius: BorderRadius.circular(15),
+          //               borderSide: BorderSide(color: Colors.blue),
+          //             ),
+          //             disabledBorder: OutlineInputBorder(
+          //               borderRadius: BorderRadius.circular(15),
+          //               borderSide: BorderSide(color: Colors.blueAccent),
+          //             ),
+          //             // suffixText: "username exits",
+          //             suffixIcon: IconButton(
+          //               onPressed: () {},
+          //               icon: Icon(Icons.remove_red_eye, color: Colors.red),
+          //             ),
+          //             prefixIcon: Icon(Icons.email, color: Colors.red),
+          //           ),
+          //         ),
+          //         Container(height: 20),
+          //         TextField(
+          //           controller: password,
+          //           obscureText: true,
+          //           decoration: InputDecoration(
+          //             hintText: "Enter Password",
+          //             border: OutlineInputBorder(
+          //               borderRadius: BorderRadius.circular(15),
+          //               borderSide: BorderSide(color: Colors.black),
+          //             ),
+          //           ),
+          //         ),
+          //         ElevatedButton(
+          //           onPressed: () {
+          //             String uemail = emailText.text.toString();
+          //             String upass = password.text;
+          //             print("Email:$uemail,password:$upass");
+          //           },
+          //           child: Text("Login"),
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
           Center(
             child: Container(
-              width: 300,
+              width: 200,
+              height: 200,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  TextField(
-                    // keyboardType: TextInputType.phone,
-                    controller: emailText,
-                    // enabled: false,
-                    decoration: InputDecoration(
-                      hintText: "Enter Email",
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20),
-                        borderSide: BorderSide(color: Colors.deepOrange),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15),
-                        borderSide: BorderSide(color: Colors.blue),
-                      ),
-                      disabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15),
-                        borderSide: BorderSide(color: Colors.blueAccent),
-                      ),
-                      // suffixText: "username exits",
-                      suffixIcon: IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.remove_red_eye, color: Colors.red),
-                      ),
-                      prefixIcon: Icon(Icons.email, color: Colors.red),
-                    ),
-                  ),
-                  Container(height: 20),
-                  TextField(
-                    controller: password,
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      hintText: "Enter Password",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15),
-                        borderSide: BorderSide(color: Colors.black),
-                      ),
-                    ),
+                  // Text("curent time: $time", style: TextStyle(fontSize: 15)),
+                  Text(
+                    "curent time: ${time.month}",
+                    style: TextStyle(fontSize: 15),
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      String uemail = emailText.text.toString();
-                      String upass = password.text;
-                      print("Email:$uemail,password:$upass");
+                      setState(() {});
                     },
-                    child: Text("Login"),
+                    child: Text("Current time"),
                   ),
                 ],
               ),
