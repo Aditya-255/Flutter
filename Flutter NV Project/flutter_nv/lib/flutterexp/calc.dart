@@ -128,7 +128,7 @@ class calculator extends StatelessWidget {
               onPressed: () {},
               style: ElevatedButton.styleFrom(
                 shape: CircleBorder(),
-                backgroundColor: Colors.grey,
+                backgroundColor: Colors.lightBlue,
               ),
               child: Text(
                 "=",
@@ -357,7 +357,9 @@ Row rowcontain() {
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.grey, // set background color
           ),
-          child: Text("A", style: TextStyle(color: Colors.white)),
+          child:
+              // IconButton(onPressed: () {}, icon: Icon(Icons.lock_clock)),
+              Text("A", style: TextStyle(color: Colors.white)),
         ),
       ),
 
