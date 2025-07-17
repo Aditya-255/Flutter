@@ -515,26 +515,63 @@ class _MyHomePageState extends State<MyHomePage> {
           //     ),
           //   ),
           // ),
+          // Center(
+          //   child: Container(
+          //     width: 200,
+          //     height: 200,
+          //     child: Column(
+          //       mainAxisAlignment: MainAxisAlignment.center,
+          //       children: [
+          //         // Text("curent time: $time", style: TextStyle(fontSize: 15)),
+          //         Text(
+          //           "curent time: ${time.month}",
+          //           style: TextStyle(fontSize: 15),
+          //         ),
+          //         ElevatedButton(
+          //           onPressed: () {
+          //             setState(() {});
+          //           },
+          //           child: Text("Current time"),
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
           Center(
-            child: Container(
-              width: 200,
-              height: 200,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  // Text("curent time: $time", style: TextStyle(fontSize: 15)),
-                  Text(
-                    "curent time: ${time.month}",
-                    style: TextStyle(fontSize: 15),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      setState(() {});
-                    },
-                    child: Text("Current time"),
-                  ),
-                ],
-              ),
+            child: Column(
+              children: [
+                Text("Select Date", style: TextStyle(fontSize: 25)),
+                ElevatedButton(
+                  onPressed: () async {
+                    DateTime? datePicked = await showDatePicker(
+                      context: context,
+                      firstDate: DateTime(2021),
+                      lastDate: DateTime(2026),
+                    );
+                    if (datePicked != null) {
+                      print(
+                        "date seleted:${datePicked.day}-${datePicked.month}-${datePicked.year}",
+                      );
+                    }
+                  },
+                  child: Text("Date"),
+                ),
+                ElevatedButton(
+                  onPressed: () async {
+                    TimeOfDay? pickedtime = await showTimePicker(
+                      context: context,
+                      initialTime: TimeOfDay.now(),
+                      initialEntryMode: TimePickerEntryMode.input,
+                    );
+                    if (pickedtime != null) {
+                      print(
+                        "time selected: ${pickedtime.hour}: ${pickedtime.minute}",
+                      );
+                    }
+                  },
+                  child: Text("Select time"),
+                ),
+              ],
             ),
           ),
     );
