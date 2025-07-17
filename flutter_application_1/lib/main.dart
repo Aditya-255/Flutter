@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'cart_page.dart';
 
-import 'dashboard.dart';
-import 'login_page.dart';
+// import 'dashboard.dart';
+// import 'login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Dashboard(),
+      home: CartPage(),
     );
   }
 }
