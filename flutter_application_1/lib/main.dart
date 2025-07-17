@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'create_card.dart';
 import 'cart_page.dart';
 
 // import 'dashboard.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: CartPage(),
+      home: instacard(),
     );
   }
 }

@@ -128,7 +128,7 @@ class CartPage extends StatelessWidget {
                       fontSize: 15,
                       overflow: TextOverflow.ellipsis,
                     ),
-                    maxLines: 2,
+                    maxLines: 3,
                   ),
                 ],
               ),
