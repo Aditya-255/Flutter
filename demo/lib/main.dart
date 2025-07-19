@@ -35,6 +35,9 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  callback() {
+    print("clicked");
+  }
 
   void _incrementCounter() {
     setState(() {
@@ -537,42 +540,92 @@ class _MyHomePageState extends State<MyHomePage> {
           //     ),
           //   ),
           // ),
-          Center(
-            child: Column(
-              children: [
-                Text("Select Date", style: TextStyle(fontSize: 25)),
-                ElevatedButton(
-                  onPressed: () async {
-                    DateTime? datePicked = await showDatePicker(
-                      context: context,
-                      firstDate: DateTime(2021),
-                      lastDate: DateTime(2026),
-                    );
-                    if (datePicked != null) {
-                      print(
-                        "date seleted:${datePicked.day}-${datePicked.month}-${datePicked.year}",
-                      );
-                    }
-                  },
-                  child: Text("Date"),
-                ),
-                ElevatedButton(
-                  onPressed: () async {
-                    TimeOfDay? pickedtime = await showTimePicker(
-                      context: context,
-                      initialTime: TimeOfDay.now(),
-                      initialEntryMode: TimePickerEntryMode.input,
-                    );
-                    if (pickedtime != null) {
-                      print(
-                        "time selected: ${pickedtime.hour}: ${pickedtime.minute}",
-                      );
-                    }
-                  },
-                  child: Text("Select time"),
-                ),
-              ],
-            ),
+          // Center(
+          //   child: Column(
+          //     children: [
+          //       Text("Select Date", style: TextStyle(fontSize: 25)),
+          //       ElevatedButton(
+          //         onPressed: () async {
+          //           DateTime? datePicked = await showDatePicker(
+          //             context: context,
+          //             firstDate: DateTime(2021),
+          //             lastDate: DateTime(2026),
+          //           );
+          //           if (datePicked != null) {
+          //             print(
+          //               "date seleted:${datePicked.day}-${datePicked.month}-${datePicked.year}",
+          //             );
+          //           }
+          //         },
+          //         child: Text("Date"),
+          //       ),
+          //       ElevatedButton(
+          //         onPressed: () async {
+          //           TimeOfDay? pickedtime = await showTimePicker(
+          //             context: context,
+          //             initialTime: TimeOfDay.now(),
+          //             initialEntryMode: TimePickerEntryMode.input,
+          //           );
+          //           if (pickedtime != null) {
+          //             print(
+          //               "time selected: ${pickedtime.hour}: ${pickedtime.minute}",
+          //             );
+          //           }
+          //         },
+          //         child: Text("Select time"),
+          //       ),
+          //     ],
+          //   ),
+          // ),
+          // GridView.count(
+          //   crossAxisCount: 3,
+          //   crossAxisSpacing: 5,
+          //   mainAxisSpacing: 5,
+          //   children: [
+          //     Container(color: Colors.red),
+          //     Container(color: Colors.amber),
+          //     Container(color: Colors.black),
+          //     Container(color: Colors.green),
+          //     Container(color: Colors.blue),
+          //     Container(color: Colors.lime),
+          //     Container(color: Colors.orange),
+          //     Container(color: Colors.pink),
+          //     Container(color: Colors.yellowAccent),
+          //   ],
+          // ),
+          //  Container(height: 100),
+          // GridView.extent(
+          //   maxCrossAxisExtent: 200,
+          //   crossAxisSpacing: 5,
+          //   mainAxisSpacing: 5,
+          //   children: [
+          //     Container(color: Colors.red),
+          //     Container(color: Colors.amber),
+          //     Container(color: Colors.black),
+          //     Container(color: Colors.green),
+          //     Container(color: Colors.blue),
+          //     Container(color: Colors.lime),
+          //     Container(color: Colors.orange),
+          //     Container(color: Colors.pink),
+          //     Container(color: Colors.yellowAccent),
+          //   ],
+          // ),
+          // GridView.builder(
+          //   itemBuilder: (context, index) {
+          //     return Container(color: Colors.black);
+          //   },
+          //   itemCount: 6,
+          //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          //     crossAxisCount: 3,
+          //     crossAxisSpacing: 10,
+          //     mainAxisSpacing: 10,
+          //   ),
+          // ),
+          ElevatedButton(
+            onPressed: () {
+              callback();
+            },
+            child: Text("click"),
           ),
     );
     // );
