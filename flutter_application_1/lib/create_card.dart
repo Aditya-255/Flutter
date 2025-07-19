@@ -24,6 +24,7 @@ class instacard extends StatelessWidget {
                     height: 80,
                     width: 80,
                     decoration: BoxDecoration(
+                      border: Border.all(color: Colors.redAccent),
                       color: Colors.blueGrey,
                       shape: BoxShape.circle,
                     ),
@@ -33,6 +34,7 @@ class instacard extends StatelessWidget {
                     height: 80,
                     width: 80,
                     decoration: BoxDecoration(
+                      border: Border.all(color: Colors.redAccent),
                       color: Colors.blueGrey,
                       shape: BoxShape.circle,
                     ),
@@ -42,6 +44,7 @@ class instacard extends StatelessWidget {
                     height: 80,
                     width: 80,
                     decoration: BoxDecoration(
+                      border: Border.all(color: Colors.redAccent),
                       color: Colors.blueGrey,
                       shape: BoxShape.circle,
                     ),
@@ -51,12 +54,14 @@ class instacard extends StatelessWidget {
                     height: 80,
                     width: 80,
                     decoration: BoxDecoration(
+                      border: Border.all(color: Colors.redAccent),
                       color: Colors.blueGrey,
                       shape: BoxShape.circle,
                     ),
                   ),
                 ],
               ),
+
               SizedBox(height: 20),
               Row(
                 children: [
@@ -64,6 +69,7 @@ class instacard extends StatelessWidget {
                     height: 50,
                     width: 50,
                     decoration: BoxDecoration(
+                      border: Border.all(color: Colors.blue),
                       shape: BoxShape.circle,
                       color: Colors.white,
                     ),
