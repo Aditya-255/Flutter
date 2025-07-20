@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'cart_page.dart';
+// import 'cart_page.dart';
 
 class instacard extends StatelessWidget {
   const instacard({super.key});
@@ -20,43 +20,60 @@ class instacard extends StatelessWidget {
               SizedBox(height: 10),
               Row(
                 children: [
-                  Container(
-                    height: 80,
-                    width: 80,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.redAccent),
-                      color: Colors.blueGrey,
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                  SizedBox(width: 10),
-                  Container(
-                    height: 80,
-                    width: 80,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.redAccent),
-                      color: Colors.blueGrey,
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                  SizedBox(width: 10),
-                  Container(
-                    height: 80,
-                    width: 80,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.redAccent),
-                      color: Colors.blueGrey,
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                  SizedBox(width: 10),
-                  Container(
-                    height: 80,
-                    width: 80,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.redAccent),
-                      color: Colors.blueGrey,
-                      shape: BoxShape.circle,
+                  // Container(
+                  //   height: 80,
+                  //   width: 80,
+                  //   decoration: BoxDecoration(
+                  //     border: Border.all(color: Colors.redAccent),
+                  //     color: Colors.blueGrey,
+                  //     shape: BoxShape.circle,
+                  //   ),
+                  // ),
+                  // SizedBox(width: 10),
+                  // Container(
+                  //   height: 80,
+                  //   width: 80,
+                  //   decoration: BoxDecoration(
+                  //     border: Border.all(color: Colors.redAccent),
+                  //     color: Colors.blueGrey,
+                  //     shape: BoxShape.circle,
+                  //   ),
+                  // ),
+                  // SizedBox(width: 10),
+                  // Container(
+                  //   height: 80,
+                  //   width: 80,
+                  //   decoration: BoxDecoration(
+                  //     border: Border.all(color: Colors.redAccent),
+                  //     color: Colors.blueGrey,
+                  //     shape: BoxShape.circle,
+                  //   ),
+                  // ),
+                  // SizedBox(width: 10),
+                  // Container(
+                  //   height: 80,
+                  //   width: 80,
+                  //   decoration: BoxDecoration(
+                  //     border: Border.all(color: Colors.redAccent),
+                  //     color: Colors.blueGrey,
+                  //     shape: BoxShape.circle,
+                  //   ),
+                  // ),
+                  Expanded(
+                    child: Container(
+                      height: 100,
+                      // color: Colors.blueGrey,
+                      child: ListView.builder(
+                        itemBuilder: (context, index) => Padding(
+                          padding: EdgeInsets.all(8),
+                          child: SizedBox(
+                            width: 80,
+                            child: CircleAvatar(backgroundColor: Colors.blue),
+                          ),
+                        ),
+                        itemCount: 10,
+                        scrollDirection: Axis.horizontal,
+                      ),
                     ),
                   ),
                 ],
