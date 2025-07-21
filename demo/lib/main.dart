@@ -1,3 +1,4 @@
+import 'package:demo/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter/rendering.dart';
 
@@ -673,18 +674,48 @@ class _MyHomePageState extends State<MyHomePage> {
           //   },
           //   child: Text("click"),
           // ),
-          Stack(
-            children: [
-              Container(width: 200, height: 200, color: Colors.blueGrey),
-              // Container(width: 160, height: 160, color: Colors.orange),
-              Positioned(
-                left: 40,
-                // right: 21,
-                // bottom: 21,
-                top: 40,
-                child: Container(width: 160, height: 160, color: Colors.blue),
-              ),
-            ],
+          // Stack(
+          //   children: [
+          //     Container(width: 200, height: 200, color: Colors.blueGrey),
+          //     // Container(width: 160, height: 160, color: Colors.orange),
+          //     Positioned(
+          //       left: 40,
+          //       // right: 21,
+          //       // bottom: 21,
+          //       top: 40,
+          //       child: Container(width: 160, height: 160, color: Colors.blue),
+          //     ),
+          //   ],
+          // ),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 150,
+                  height: 50,
+                  child: RoundedButton(
+                    btnname: "Login",
+                    // icon: Icon(Icons.play_arrow),
+                    callback: () {
+                      print("login in");
+                    },
+                  ),
+                ),
+                Container(
+                  width: 150,
+                  height: 50,
+                  child: RoundedButton(
+                    btnname: "Login",
+                    icon: Icon(Icons.play_arrow),
+                    callback: () {
+                      print("login in");
+                    },
+                    bgcolor: Colors.amber,
+                  ),
+                ),
+              ],
+            ),
           ),
     );
     // );
