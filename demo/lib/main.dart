@@ -717,24 +717,63 @@ class _MyHomePageState extends State<MyHomePage> {
           //     ],
           //   ),
           // ),
-          Container(
-            height: double.infinity,
-            width: double.infinity,
-            child: Wrap(
-              direction: Axis.horizontal,
-              spacing: 11,
-              runSpacing: 11,
-              alignment: WrapAlignment.spaceBetween,
-              children: [
-                Container(width: 100, height: 100, color: Colors.red),
-                Container(width: 100, height: 100, color: Colors.amber),
-                Container(width: 100, height: 100, color: Colors.brown),
-                Container(width: 100, height: 100, color: Colors.blue),
-                Container(width: 100, height: 100, color: Colors.black),
-                Container(width: 100, height: 100, color: Colors.orange),
-                Container(width: 100, height: 100, color: Colors.cyan),
-              ],
-            ),
+          // Container(
+          //   height: double.infinity,
+          //   width: double.infinity,
+          //   child: Wrap(
+          //     direction: Axis.horizontal,
+          //     spacing: 11,
+          //     runSpacing: 11,
+          //     alignment: WrapAlignment.spaceBetween,
+          //     children: [
+          //       Container(width: 100, height: 100, color: Colors.red),
+          //       Container(width: 100, height: 100, color: Colors.amber),
+          //       Container(width: 100, height: 100, color: Colors.brown),
+          //       Container(width: 100, height: 100, color: Colors.blue),
+          //       Container(width: 100, height: 100, color: Colors.black),
+          //       Container(width: 100, height: 100, color: Colors.orange),
+          //       Container(width: 100, height: 100, color: Colors.cyan),
+          //     ],
+          //   ),
+          // ),
+          // ConstrainedBox(
+          //   constraints: BoxConstraints(
+          //     minHeight: 50,
+          //     minWidth: 100,
+          //     maxHeight: 80,
+          //     maxWidth: 200,
+          //   ),
+          //   child: SizedBox.expand(
+          //     // child: SizedBox.shrink(
+          //     // width: 200,
+          //     // height: 50,
+          //     child: ElevatedButton(onPressed: () {}, child: Text("Click")),
+          //   ),
+          // ),
+          Wrap(
+            direction: Axis.vertical,
+            children: [
+              SizedBox.square(
+                dimension: 100,
+                // width: 200,
+                // height: 50,
+                child: ElevatedButton(onPressed: () {}, child: Text("Click")),
+              ),
+              SizedBox(height: 20),
+              SizedBox.square(
+                dimension: 100,
+                // width: 200,
+                // height: 50,
+                child: ElevatedButton(onPressed: () {}, child: Text("Click")),
+              ),
+              SizedBox(height: 50,),
+              SizedBox.square(
+                dimension: 100,
+                // width: 200,
+                // height: 50,
+                child: ElevatedButton(onPressed: () {}, child: Text("Click")),
+              ),
+            ],
           ),
     );
     // );
