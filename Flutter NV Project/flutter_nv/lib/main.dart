@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_nv/flutterexp/calc.dart';
-import 'package:flutter_nv/flutterexp/columnexp.dart';
-import 'package:flutter_nv/flutterexp/conexp.dart';
+import 'package:flutter_nv/calc.dart';
+import 'package:flutter_nv/columnexp.dart';
+import 'package:flutter_nv/conexp.dart';
 
 void main() {
   runApp(const MyApp());
