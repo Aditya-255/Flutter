@@ -687,33 +687,52 @@ class _MyHomePageState extends State<MyHomePage> {
           //     ),
           //   ],
           // ),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+          // Center(
+          //   child: Column(
+          //     mainAxisAlignment: MainAxisAlignment.center,
+          //     children: [
+          //       Container(
+          //         width: 150,
+          //         height: 50,
+          //         child: RoundedButton(
+          //           btnname: "Login",
+          //           // icon: Icon(Icons.play_arrow),
+          //           callback: () {
+          //             print("login in");
+          //           },
+          //         ),
+          //       ),
+          //       Container(
+          //         width: 150,
+          //         height: 50,
+          //         child: RoundedButton(
+          //           btnname: "Login",
+          //           icon: Icon(Icons.play_arrow),
+          //           callback: () {
+          //             print("login in");
+          //           },
+          //           bgcolor: Colors.amber,
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // ),
+          Container(
+            height: double.infinity,
+            width: double.infinity,
+            child: Wrap(
+              direction: Axis.horizontal,
+              spacing: 11,
+              runSpacing: 11,
+              alignment: WrapAlignment.spaceBetween,
               children: [
-                Container(
-                  width: 150,
-                  height: 50,
-                  child: RoundedButton(
-                    btnname: "Login",
-                    // icon: Icon(Icons.play_arrow),
-                    callback: () {
-                      print("login in");
-                    },
-                  ),
-                ),
-                Container(
-                  width: 150,
-                  height: 50,
-                  child: RoundedButton(
-                    btnname: "Login",
-                    icon: Icon(Icons.play_arrow),
-                    callback: () {
-                      print("login in");
-                    },
-                    bgcolor: Colors.amber,
-                  ),
-                ),
+                Container(width: 100, height: 100, color: Colors.red),
+                Container(width: 100, height: 100, color: Colors.amber),
+                Container(width: 100, height: 100, color: Colors.brown),
+                Container(width: 100, height: 100, color: Colors.blue),
+                Container(width: 100, height: 100, color: Colors.black),
+                Container(width: 100, height: 100, color: Colors.orange),
+                Container(width: 100, height: 100, color: Colors.cyan),
               ],
             ),
           ),
