@@ -35,7 +35,8 @@ class _StopWatchExState extends State<StopWatchEx> {
               ElevatedButton(
                 onPressed: null,
                 style: ButtonStyle(
-                  backgroundColor: WidgetStatePropertyAll(Colors.green),
+                  backgroundColor: WidgetStatePropertyAll(Colors.red),
+                  foregroundColor: WidgetStatePropertyAll(Colors.white),
                 ),
                 child: Text("Start"),
               ),
@@ -44,6 +45,7 @@ class _StopWatchExState extends State<StopWatchEx> {
                 onPressed: null,
                 style: ButtonStyle(
                   backgroundColor: WidgetStatePropertyAll(Colors.green),
+                  foregroundColor: WidgetStatePropertyAll(Colors.white),
                 ),
                 child: Text("Stop"),
               ),
