@@ -12,15 +12,44 @@ class StopWatchEx extends StatefulWidget {
 class _StopWatchExState extends State<StopWatchEx> {
   int second = 0;
   late Timer timer;
+  String _secondtext() => second <= 1 ? "Second" : "Seconds";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("StopWatch")),
-      body: Center(
-        child: Text(
-          "$second Seconds",
-          style: Theme.of(context).textTheme.headlineMedium,
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Center(
+            child: Text(
+              "${second} ${_secondtext()}",
+              style: TextStyle(fontSize: 50, color: Colors.blueAccent),
+            ),
+          ),
+          SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: null,
+                style: ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(Colors.green),
+                ),
+                child: Text("Start"),
+              ),
+              SizedBox(width: 20),
+              ElevatedButton(
+                onPressed: null,
+                style: ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(Colors.green),
+                ),
+                child: Text("Stop"),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
