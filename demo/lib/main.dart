@@ -750,30 +750,57 @@ class _MyHomePageState extends State<MyHomePage> {
           //     child: ElevatedButton(onPressed: () {}, child: Text("Click")),
           //   ),
           // ),
-          Wrap(
-            direction: Axis.vertical,
-            children: [
-              SizedBox.square(
-                dimension: 100,
-                // width: 200,
-                // height: 50,
-                child: ElevatedButton(onPressed: () {}, child: Text("Click")),
-              ),
-              SizedBox(height: 20),
-              SizedBox.square(
-                dimension: 100,
-                // width: 200,
-                // height: 50,
-                child: ElevatedButton(onPressed: () {}, child: Text("Click")),
-              ),
-              SizedBox(height: 50,),
-              SizedBox.square(
-                dimension: 100,
-                // width: 200,
-                // height: 50,
-                child: ElevatedButton(onPressed: () {}, child: Text("Click")),
-              ),
-            ],
+          // Wrap(
+          //   direction: Axis.vertical,
+          //   children: [
+          //     SizedBox.square(
+          //       dimension: 100,
+          //       // width: 200,
+          //       // height: 50,
+          //       child: ElevatedButton(onPressed: () {}, child: Text("Click")),
+          //     ),
+          //     SizedBox(height: 20),
+          //     SizedBox.square(
+          //       dimension: 100,
+          //       // width: 200,
+          //       // height: 50,
+          //       child: ElevatedButton(onPressed: () {}, child: Text("Click")),
+          //     ),
+          //     SizedBox(height: 50,),
+          //     SizedBox.square(
+          //       dimension: 100,
+          //       // width: 200,
+          //       // height: 50,
+          //       child: ElevatedButton(onPressed: () {}, child: Text("Click")),
+          //     ),
+          //   ],
+          // ),
+          RichText(
+            text: TextSpan(
+              style: TextStyle(color: Colors.black, fontSize: 25),
+              children: [
+                TextSpan(
+                  text: "hello ",
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 50,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                TextSpan(
+                  text: "world ",
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 50,
+                  ),
+                ),
+                TextSpan(
+                  text: "welcome ",
+                  style: TextStyle(color: Colors.red),
+                ),
+              ],
+            ),
           ),
     );
     // );
