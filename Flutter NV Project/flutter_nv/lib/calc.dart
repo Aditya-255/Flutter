@@ -85,9 +85,10 @@ class calculator extends StatelessWidget {
                 shape: CircleBorder(),
                 backgroundColor: Colors.grey,
               ),
-              child: Text(
-                "+/-",
-                style: TextStyle(color: Colors.white, fontSize: 30),
+              child: FaIcon(
+                FontAwesomeIcons.plusMinus,
+                size: 35,
+                color: Colors.black,
               ),
             ),
           ),
@@ -133,9 +134,10 @@ class calculator extends StatelessWidget {
                 shape: CircleBorder(),
                 backgroundColor: Colors.lightBlue,
               ),
-              child: Text(
-                "=",
-                style: TextStyle(color: Colors.black, fontSize: 35),
+              child: FaIcon(
+                FontAwesomeIcons.equals,
+                size: 35,
+                color: Colors.black,
               ),
             ),
           ),
@@ -272,7 +274,11 @@ class calculator extends StatelessWidget {
                 shape: CircleBorder(),
                 backgroundColor: Colors.grey,
               ),
-              child: Icon(Icons.remove, size: 35, color: Colors.black),
+              child: FaIcon(
+                FontAwesomeIcons.minus,
+                size: 30,
+                color: Colors.black,
+              ),
             ),
           ),
         ),
@@ -308,7 +314,7 @@ Row row1contain() {
             ),
             child: Text(
               "()",
-              style: TextStyle(color: Colors.black, fontSize: 30),
+              style: TextStyle(color: Colors.white, fontSize: 30),
             ),
           ),
         ),
@@ -322,9 +328,10 @@ Row row1contain() {
               shape: CircleBorder(),
               backgroundColor: Colors.grey,
             ),
-            child: Text(
-              "%",
-              style: TextStyle(color: Colors.black, fontSize: 30),
+            child: FaIcon(
+              FontAwesomeIcons.percent,
+              size: 35,
+              color: Colors.black,
             ),
           ),
         ),
@@ -338,9 +345,10 @@ Row row1contain() {
               shape: CircleBorder(),
               backgroundColor: Colors.grey,
             ),
-            child: Text(
-              "/",
-              style: TextStyle(fontSize: 45, color: Colors.black),
+            child: FaIcon(
+              FontAwesomeIcons.divide,
+              size: 35,
+              color: Colors.black,
             ),
           ),
         ),
@@ -392,7 +400,7 @@ Row rowcontain() {
             backgroundColor: Colors.black, // set background color
           ),
           child: FaIcon(
-            FontAwesomeIcons.rectangleList,
+            FontAwesomeIcons.arrowsRotate,
             size: 20,
             color: Colors.white,
           ),
@@ -474,7 +482,11 @@ Row row2contain() {
               shape: CircleBorder(),
               backgroundColor: Colors.grey,
             ),
-            child: Icon(Icons.close, size: 35, color: Colors.black),
+            child: FaIcon(
+              FontAwesomeIcons.xmark,
+              size: 35,
+              color: Colors.black,
+            ),
           ),
         ),
       ),
