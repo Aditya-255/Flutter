@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_nv/calc.dart';
+import 'package:flutter_nv/calc.dart';
 // import 'package:flutter_nv/columnexp.dart';
 // import 'package:flutter_nv/conexp.dart';
-import 'package:flutter_nv/stop_watch.dart';
+// import 'package:flutter_nv/stop_watch.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
         body:
             // Containercontain()
             // Colcontain(),
-            // calculator(),
-            StopWatchEx(),
+            calculator(),
+        // StopWatchEx(),
       ),
     );
   }

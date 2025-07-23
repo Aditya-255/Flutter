@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class calculator extends StatelessWidget {
   calculator({super.key});
@@ -357,11 +358,11 @@ Row rowcontain() {
         child: ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.grey, // set background color
+            backgroundColor: Colors.black, // set background color
           ),
           child:
               // IconButton(onPressed: () {}, icon: Icon(Icons.lock_clock)),
-              Text("A", style: TextStyle(color: Colors.white)),
+              FaIcon(FontAwesomeIcons.clock, size: 20, color: Colors.white),
         ),
       ),
 
@@ -372,9 +373,13 @@ Row rowcontain() {
         child: ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.grey, // set background color
+            backgroundColor: Colors.black, // set background color
           ),
-          child: Text("A", style: TextStyle(color: Colors.white)),
+          child: FaIcon(
+            FontAwesomeIcons.calculator,
+            size: 20,
+            color: Colors.white,
+          ),
         ),
       ),
       SizedBox(width: 10),
@@ -384,9 +389,13 @@ Row rowcontain() {
         child: ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.grey, // set background color
+            backgroundColor: Colors.black, // set background color
           ),
-          child: Text("A", style: TextStyle(color: Colors.white)),
+          child: FaIcon(
+            FontAwesomeIcons.rectangleList,
+            size: 20,
+            color: Colors.white,
+          ),
         ),
       ),
       SizedBox(width: 110),
