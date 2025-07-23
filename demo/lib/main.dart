@@ -803,11 +803,29 @@ class _MyHomePageState extends State<MyHomePage> {
           //     ],
           //   ),
           // ),
-          Center(
-            child: Row(
+          // Center(
+          //   child: Row(
+          //     children: [
+          //       Icon(Icons.add_alert, size: 50, color: Colors.blue),
+          //       FaIcon(FontAwesomeIcons.clock, size: 50),
+          //     ],
+          //   ),
+          // ),
+          Container(
+            width: double.infinity,
+            height: double.infinity,
+            color: Colors.blueGrey,
+            child: Stack(
               children: [
-                Icon(Icons.add_alert, size: 50, color: Colors.blue),
-                FaIcon(FontAwesomeIcons.clock, size: 50),
+                Positioned(
+                  bottom: 1,
+                  right: 1,
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.white,
+                  ),
+                ),
               ],
             ),
           ),
