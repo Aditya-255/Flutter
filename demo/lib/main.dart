@@ -1,5 +1,6 @@
-import 'package:demo/widgets/button_widget.dart';
+// import 'package:demo/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 // import 'package:flutter/rendering.dart';
 
 void main() {
@@ -775,30 +776,38 @@ class _MyHomePageState extends State<MyHomePage> {
           //     ),
           //   ],
           // ),
-          RichText(
-            text: TextSpan(
-              style: TextStyle(color: Colors.black, fontSize: 25),
+          // RichText(
+          //   text: TextSpan(
+          //     style: TextStyle(color: Colors.black, fontSize: 25),
+          //     children: [
+          //       TextSpan(
+          //         text: "hello ",
+          //         style: TextStyle(
+          //           color: Colors.grey,
+          //           fontSize: 50,
+          //           fontWeight: FontWeight.bold,
+          //         ),
+          //       ),
+          //       TextSpan(
+          //         text: "world ",
+          //         style: TextStyle(
+          //           color: Colors.blue,
+          //           fontWeight: FontWeight.bold,
+          //           fontSize: 50,
+          //         ),
+          //       ),
+          //       TextSpan(
+          //         text: "welcome ",
+          //         style: TextStyle(color: Colors.red),
+          //       ),
+          //     ],
+          //   ),
+          // ),
+          Center(
+            child: Row(
               children: [
-                TextSpan(
-                  text: "hello ",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 50,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                TextSpan(
-                  text: "world ",
-                  style: TextStyle(
-                    color: Colors.blue,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 50,
-                  ),
-                ),
-                TextSpan(
-                  text: "welcome ",
-                  style: TextStyle(color: Colors.red),
-                ),
+                Icon(Icons.add_alert, size: 50, color: Colors.blue),
+                FaIcon(FontAwesomeIcons.clock, size: 50),
               ],
             ),
           ),
