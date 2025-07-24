@@ -85,10 +85,17 @@ class instacard extends StatelessWidget {
                   Container(
                     height: 50,
                     width: 50,
+
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.blue),
                       shape: BoxShape.circle,
                       color: Colors.white,
+                    ),
+                    child: ClipOval(
+                      child: Image.asset(
+                        "assets/images/1.jpg",
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   Text(

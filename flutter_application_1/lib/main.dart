@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/nodes_app/screens/notes.dart';
 import 'create_card.dart';
 // import 'cart_page.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: instacard(),
+      home: Notescreen(),
     );
   }
 }
