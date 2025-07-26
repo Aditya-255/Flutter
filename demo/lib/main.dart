@@ -1,4 +1,5 @@
 // import 'package:demo/widgets/button_widget.dart';
+import 'package:demo/introfile.dart';
 import 'package:demo/stateful_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
           headlineSmall: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
       ),
-      home: Stateful(),
+      home: IntroPage(),
+      // Stateful(),
       // MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -812,24 +814,31 @@ class _MyHomePageState extends State<MyHomePage> {
           //     ],
           //   ),
           // ),
-          Container(
-            width: double.infinity,
-            height: double.infinity,
-            color: Colors.blueGrey,
-            child: Stack(
-              children: [
-                Positioned(
-                  bottom: 1,
-                  right: 1,
-                  child: Container(
-                    width: 100,
-                    height: 100,
-                    color: Colors.white,
-                  ),
-                ),
-              ],
-            ),
-          ),
+          // Container(
+          //   width: double.infinity,
+          //   height: double.infinity,
+          //   color: Colors.blueGrey,
+          //   child: Stack(
+          //     children: [
+          //       Positioned(
+          //         bottom: 1,
+          //         right: 1,
+          //         child: Container(
+          //           width: 100,
+          //           height: 100,
+          //           color: Colors.white,
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // ),
+          // ConstrainedBox(
+          //   constraints: BoxConstraints(maxWidth: 300, maxHeight: 100),
+          //   child: Text(
+          //     "Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world  ",
+          //   ),
+          // ),
+          Text("hello world"),
     );
     // );
   }
