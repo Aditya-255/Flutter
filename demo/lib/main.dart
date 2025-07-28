@@ -1,5 +1,6 @@
 // import 'package:demo/widgets/button_widget.dart';
 import 'package:demo/introfile.dart';
+import 'package:demo/my_profile.dart';
 import 'package:demo/spalash_page.dart';
 import 'package:demo/stateful_widget.dart';
 import 'package:flutter/material.dart';
@@ -24,10 +25,11 @@ class MyApp extends StatelessWidget {
           headlineSmall: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
       ),
-      home: SpalashPage(),
-      // IntroPage(),
-      // Stateful(),
-      // MyHomePage(title: 'Flutter Demo Home Page'),
+      home:
+          // SpalashPage(),
+          // IntroPage(),
+          // Stateful(),
+          MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -104,6 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    var namecontroller = TextEditingController();
     var emailText = TextEditingController();
     var password = TextEditingController();
     var time = DateTime.now();
@@ -840,7 +843,26 @@ class _MyHomePageState extends State<MyHomePage> {
           //     "Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world  ",
           //   ),
           // ),
-          Text("hello world"),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Dashboard", style: TextStyle(fontSize: 25)),
+              SizedBox(height: 11),
+              TextField(controller: namecontroller),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          MyProfile(namecontroller.text.toString()),
+                    ),
+                  );
+                },
+                child: Text("My profile"),
+              ),
+            ],
+          ),
     );
     // );
   }
