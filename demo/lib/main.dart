@@ -1,4 +1,5 @@
 // import 'package:demo/widgets/button_widget.dart';
+import 'package:demo/Range_Slider.dart';
 import 'package:demo/introfile.dart';
 import 'package:demo/my_profile.dart';
 import 'package:demo/spalash_page.dart';
@@ -25,11 +26,11 @@ class MyApp extends StatelessWidget {
           headlineSmall: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
       ),
-      home:
-          // SpalashPage(),
-          // IntroPage(),
-          // Stateful(),
-          MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Rangeslider(),
+      // SpalashPage(),
+      // IntroPage(),
+      // Stateful(),
+      // MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -106,7 +107,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    RangeValues rangeValues = RangeValues(0, 2);
     var namecontroller = TextEditingController();
+    RangeLabels rangeLabels = RangeLabels(
+      rangeValues.start.toString(),
+      rangeValues.end.toString(),
+    );
     var emailText = TextEditingController();
     var password = TextEditingController();
     var time = DateTime.now();
