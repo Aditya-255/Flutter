@@ -10,8 +10,11 @@ class StopWatchEx extends StatefulWidget {
 }
 
 class _StopWatchExState extends State<StopWatchEx> {
-  int second = 0;
+  double second = 0;
   late Timer timer;
+  bool isTinking = false;
+  int milli = 0;
+
   String _secondtext() => second <= 1 ? "Second" : "Seconds";
   @override
   Widget build(BuildContext context) {
@@ -33,7 +36,9 @@ class _StopWatchExState extends State<StopWatchEx> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ElevatedButton(
-                onPressed: null,
+                onPressed: () {
+                  isTinking ? null : starttimer();
+                },
                 style: ButtonStyle(
                   backgroundColor: WidgetStatePropertyAll(Colors.red),
                   foregroundColor: WidgetStatePropertyAll(Colors.white),
@@ -42,7 +47,9 @@ class _StopWatchExState extends State<StopWatchEx> {
               ),
               SizedBox(width: 20),
               ElevatedButton(
-                onPressed: null,
+                onPressed: () {
+                  isTinking ? stopTimer() : null;
+                },
                 style: ButtonStyle(
                   backgroundColor: WidgetStatePropertyAll(Colors.green),
                   foregroundColor: WidgetStatePropertyAll(Colors.white),
@@ -57,16 +64,31 @@ class _StopWatchExState extends State<StopWatchEx> {
   }
 
   @override
+  void starttimer() {
+    timer = Timer.periodic(const Duration(milliseconds: 1), onclick);
+    setState(() {
+      isTinking = true;
+      milli = 0;
+    });
+  }
+
+  void stopTimer() {
+    timer.cancel();
+    second = 0;
+    setState(() {
+      isTinking = false;
+    });
+  }
+
   void initState() {
-    // TODO: implement initState
     super.initState();
-    timer = Timer.periodic(const Duration(seconds: 1), onclick);
   }
 
   void onclick(Timer timer) {
     if (mounted) {
       setState(() {
-        second++;
+        milli += 10;
+        second = milli / 1000;
       });
     }
   }
@@ -74,7 +96,7 @@ class _StopWatchExState extends State<StopWatchEx> {
   @override
   void dispose() {
     // TODO: implement dispose
-    timer.cancel();
+
     super.dispose();
   }
 }
