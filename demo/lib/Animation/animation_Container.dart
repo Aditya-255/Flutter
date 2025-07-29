@@ -60,3 +60,47 @@ class _AnimationConState extends State<AnimationCon> {
     );
   }
 }
+
+class AnimationOpacity extends StatefulWidget {
+  const AnimationOpacity({super.key});
+
+  @override
+  State<AnimationOpacity> createState() => _AnimationOpacityState();
+}
+
+class _AnimationOpacityState extends State<AnimationOpacity> {
+  var _opacity = 1.0;
+  bool flag = true;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            AnimatedOpacity(
+              duration: Duration(seconds: 3),
+              opacity: _opacity,
+              curve: Curves.bounceIn,
+              child: Container(width: 200, height: 200, color: Colors.red),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  if (flag) {
+                    _opacity = 0.0;
+                    flag = false;
+                  } else {
+                    _opacity = 1.0;
+                    flag = true;
+                  }
+                });
+              },
+              child: Text("Animate Opacity"),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
