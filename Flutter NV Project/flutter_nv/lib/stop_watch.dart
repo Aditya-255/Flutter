@@ -1,4 +1,5 @@
 import 'dart:async';
+// import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class _StopWatchExState extends State<StopWatchEx> {
   late Timer timer;
   bool isTinking = false;
   int milli = 0;
-
+  final laps = <int>[];
   String _secondtext() => second <= 1 ? "Second" : "Seconds";
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class _StopWatchExState extends State<StopWatchEx> {
           Center(
             child: Text(
               "${second} ${_secondtext()}",
-              style: TextStyle(fontSize: 50, color: Colors.blueAccent),
+              style: TextStyle(fontSize: 30, color: Colors.blueAccent),
             ),
           ),
           SizedBox(height: 10),
@@ -51,13 +52,27 @@ class _StopWatchExState extends State<StopWatchEx> {
                   isTinking ? stopTimer() : null;
                 },
                 style: ButtonStyle(
-                  backgroundColor: WidgetStatePropertyAll(Colors.green),
+                  backgroundColor: WidgetStatePropertyAll(
+                    Colors.green.shade300,
+                  ),
                   foregroundColor: WidgetStatePropertyAll(Colors.white),
                 ),
                 child: Text("Stop"),
               ),
+              SizedBox(width: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Lapclick();
+                },
+                style: ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(Colors.grey),
+                  foregroundColor: WidgetStatePropertyAll(Colors.white),
+                ),
+                child: Text("Laps"),
+              ),
             ],
           ),
+          Expanded(child: builderDisplay()),
         ],
       ),
     );
@@ -65,16 +80,25 @@ class _StopWatchExState extends State<StopWatchEx> {
 
   @override
   void starttimer() {
-    timer = Timer.periodic(const Duration(milliseconds: 1), onclick);
+    timer = Timer.periodic(const Duration(milliseconds: 100), onclick);
     setState(() {
       isTinking = true;
       milli = 0;
     });
   }
 
+  void Lapclick() {
+    if (isTinking) {
+      setState(() {
+        laps.add(milli);
+        milli = 0;
+      });
+    }
+    print(laps);
+  }
+
   void stopTimer() {
     timer.cancel();
-    second = 0;
     setState(() {
       isTinking = false;
     });
@@ -87,10 +111,34 @@ class _StopWatchExState extends State<StopWatchEx> {
   void onclick(Timer timer) {
     if (mounted) {
       setState(() {
-        milli += 10;
+        milli += 100;
         second = milli / 1000;
       });
     }
+  }
+
+  Widget buildDisplay() {
+    return ListView(
+      children: [
+        for (int i in laps)
+          ListTile(
+            title: Text("Lap ${laps.indexOf(i) + 1}:${i / 1000} seconds"),
+          ),
+      ],
+    );
+  }
+
+  Widget builderDisplay() {
+    return ListView.builder(
+      itemBuilder: (context, Index) {
+        return ListTile(
+          title: Text(
+            "Lap ${laps.indexOf(laps[Index]) + 1}:${laps[Index] / 1000} seconds",
+          ),
+        );
+      },
+      itemCount: laps.length,
+    );
   }
 
   @override
