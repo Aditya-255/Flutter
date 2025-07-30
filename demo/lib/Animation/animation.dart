@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 class AnimationCon extends StatefulWidget {
@@ -100,6 +102,67 @@ class _AnimationOpacityState extends State<AnimationOpacity> {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class CrossFade extends StatefulWidget {
+  const CrossFade({super.key});
+
+  @override
+  State<CrossFade> createState() => _CrossFadeState();
+}
+
+class _CrossFadeState extends State<CrossFade> {
+  @override
+  bool isfirst = true;
+  // void initState() {
+  //   super.initState();
+  //   Timer(Duration(seconds: 4), () {
+  //     reload();
+  //   });
+  // }
+
+  void reload() {
+    setState(() {
+      if (isfirst) {
+        isfirst = false;
+      } else {
+        isfirst = true;
+      }
+    });
+  }
+
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: AnimatedCrossFade(
+              duration: Duration(seconds: 2),
+              firstChild: Container(width: 200, height: 200, color: Colors.red),
+              secondChild: Image.asset(
+                "assets/images/1.jpg",
+                width: 100,
+                height: 100,
+              ),
+              sizeCurve: Curves.fastOutSlowIn,
+              firstCurve: Curves.easeIn,
+              secondCurve: Curves.bounceInOut,
+              crossFadeState: isfirst
+                  ? CrossFadeState.showFirst
+                  : CrossFadeState.showSecond,
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              reload();
+            },
+            child: Text("Animate CrossFade"),
+          ),
+        ],
       ),
     );
   }
