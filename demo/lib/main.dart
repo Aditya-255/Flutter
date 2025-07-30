@@ -1,5 +1,5 @@
 // import 'package:demo/widgets/button_widget.dart';
-import 'package:demo/Animation/animation_Container.dart';
+import 'package:demo/Animation/animation.dart';
 import 'package:demo/Range_Slider.dart';
 import 'package:demo/introfile.dart';
 import 'package:demo/my_profile.dart';
