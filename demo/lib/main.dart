@@ -27,7 +27,8 @@ class MyApp extends StatelessWidget {
           headlineSmall: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
       ),
-      home: CrossFade(),
+      home: HeroAnimation()
+      // CrossFade(),
       // AnimationOpacity(),
       // AnimationCon(),
       // Rangeslider(),
