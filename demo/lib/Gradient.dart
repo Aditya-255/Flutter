@@ -27,7 +27,7 @@ class Gradient_view extends StatelessWidget {
       //   ),
       // ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: BoxDecoration( 
           gradient: RadialGradient(
             colors: [Color(0xffcfd9df), Color(0xffe2ebf0)],
           ),
