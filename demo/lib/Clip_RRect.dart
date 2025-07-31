@@ -12,7 +12,7 @@ class MyWidget extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(500)),
           child: Image.asset(
             "assets/images/1.jpg",
-            height: 100,
+            height: 100, 
             width: 100,
             fit: BoxFit.fill,
           ),

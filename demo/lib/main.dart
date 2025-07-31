@@ -2,6 +2,7 @@
 import 'package:demo/Animation/List_Wheel_ScrollView.dart';
 import 'package:demo/Animation/animation.dart';
 import 'package:demo/Clip_RRect.dart';
+import 'package:demo/Gradient.dart';
 import 'package:demo/Range_Slider.dart';
 import 'package:demo/introfile.dart';
 import 'package:demo/my_profile.dart';
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
           headlineSmall: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
       ),
-      home: MyWidget(),
+      home: Gradient_view(),
+      // MyWidget(),
       // ListWheelScrollview(),
       // HeroAnimation()
       // CrossFade(),
