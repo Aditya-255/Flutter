@@ -1,5 +1,6 @@
 // import 'package:demo/widgets/button_widget.dart';
 import 'package:demo/Animation/List_Wheel_ScrollView.dart';
+import 'package:demo/Animation/Tween_animation.dart';
 import 'package:demo/Animation/animation.dart';
 import 'package:demo/Clip_RRect.dart';
 import 'package:demo/Gradient.dart';
@@ -31,7 +32,8 @@ class MyApp extends StatelessWidget {
           headlineSmall: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
       ),
-      home: MappingList(),
+      home: TweenAnimation(),
+      // MappingList(),
       // Gradient_view(),
       // MyWidget(),
       // ListWheelScrollview(),
