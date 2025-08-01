@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/bmi_calc.dart';
 import 'package:flutter_application_1/login_page.dart';
 import 'package:flutter_application_1/nodes_app/screens/notes_screen.dart';
 import 'package:flutter_application_1/splash_page.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: SplashPage(),
+      home: BmiCalcScreen(),
       // LoginPage(),
     );
   }
