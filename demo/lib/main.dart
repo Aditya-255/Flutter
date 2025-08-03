@@ -1,5 +1,6 @@
 // import 'package:demo/widgets/button_widget.dart';
 import 'package:demo/Animation/List_Wheel_ScrollView.dart';
+import 'package:demo/Animation/Ripple_Effect.dart';
 import 'package:demo/Animation/Tween_animation.dart';
 import 'package:demo/Animation/animation.dart';
 import 'package:demo/Clip_RRect.dart';
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
           headlineSmall: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
       ),
-      home: TweenAnimation(),
+      home: RippleEffect(),
+      // TweenAnimation(),
       // MappingList(),
       // Gradient_view(),
       // MyWidget(),
