@@ -1,46 +1,56 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Counter/counter_controller.dart';
-import 'package:get/state_manager.dart';
+import 'package:get/get.dart';
+// import 'package:get/state_manager.dart';
 
 class Counter extends StatelessWidget {
-  CounterController counterController = CounterController();
-  var count = 0;
+  CounterController controller = Get.find<CounterController>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Counter App'), centerTitle: true),
+      appBar: AppBar(title: Text('Counter App')),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Text("Total Clicks", style: TextStyle(fontSize: 50)),
           Obx(
             () => Text(
-              'Count: ${counterController.count.toString()}',
-              style: TextStyle(fontSize: 24),
+              controller.count.value.toString(),
+              style: TextStyle(fontSize: 40),
             ),
           ),
-          SizedBox(height: 20),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  foregroundColor: Colors.white,
+                ),
                 onPressed: () {
-                  counterController.increment();
+                  controller.increment();
                 },
-                child: Icon(Icons.add),
+                child: Icon(Icons.add, size: 50),
               ),
-              SizedBox(width: 20),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  foregroundColor: Colors.white,
+                ),
                 onPressed: () {
-                  counterController.decrement();
+                  controller.decrement();
                 },
-                child: Icon(Icons.remove),
+                child: Icon(Icons.remove, size: 50),
               ),
-              SizedBox(width: 20),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  foregroundColor: Colors.white,
+                ),
                 onPressed: () {
-                  counterController.reset();
+                  controller.reset();
                 },
-                child: Icon(Icons.refresh),
+                child: Icon(Icons.undo, size: 50),
               ),
             ],
           ),

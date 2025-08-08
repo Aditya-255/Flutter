@@ -1,25 +1,38 @@
+//settings_screen.dart
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Counter/counter_controller.dart';
+import 'package:get/get.dart';
 
-class SettingScreen extends StatelessWidget {
-  SettingScreen({super.key});
-  CounterController counterControllerlimit = CounterController();
-
+class SettingsScreen extends StatelessWidget {
+  SettingsScreen({super.key});
+  CounterController controller = Get.put(CounterController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
-        children: [
-          TextField(
-            onChanged: (value) {
-              counterControllerlimit.count.value = int.parse(value);
-            },
-            decoration: InputDecoration(
-              labelText: "Set Limit",
-              hintText: "Enter a limit for the counter",
-            ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            children: [
+              Expanded(
+                child: TextField(
+                  controller: controller.limitTxtController,
+                  decoration: InputDecoration(
+                    hintText: 'Enter any number as limit',
+                    labelText: 'Total Capacity',
+                  ),
+                ),
+              ),
+              IconButton(
+                onPressed: () {
+                  controller.saveLimit();
+                },
+                icon: Icon(Icons.save),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

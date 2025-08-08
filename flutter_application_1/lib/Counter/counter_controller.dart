@@ -1,21 +1,28 @@
+import 'package:flutter/widgets.dart';
+import 'package:flutter_application_1/Counter/counter_Screen.dart';
 import 'package:get/get.dart';
 
 class CounterController extends GetxController {
-  var count = 0.obs;
-
+  RxInt count = 0.obs;
+  RxInt limit = 0.obs;
+  TextEditingController limitTxtController = TextEditingController();
   void increment() {
-    count.value++;
+    if (count.value < limit.value) {
+      count.value++;
+    }
   }
 
   void decrement() {
-    count.value--;
+    if (count.value > 0) count.value--;
   }
 
   void reset() {
     count.value = 0;
   }
 
-  void setLimit(int limit) {
-    count.value = limit;
+  void saveLimit() {
+    limit.value = int.parse(limitTxtController.text);
+    print(limitTxtController.text);
+    Get.to(Counter());
   }
 }

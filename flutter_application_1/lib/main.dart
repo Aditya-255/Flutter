@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Counter/counter_Screen.dart';
+import 'package:flutter_application_1/Counter/setting_screen.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 // import 'package:flutter_application_1/bmi_calc.dart';
 // import 'package:flutter_application_1/login_page.dart';
 // import 'package:flutter_application_1/nodes_app/screens/notes_screen.dart';
@@ -14,21 +16,20 @@ void main() {
   runApp(const MyApp());
 }
 
-// design product card which contains image of product name of
-// it actual price and current and current price
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Ecom App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Counter(),
+      home: SettingsScreen(),
+      // Counter(),
       // BmiCalcScreen(),
       // LoginPage(),
     );
