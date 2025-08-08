@@ -5,12 +5,13 @@ import 'package:demo/Animation/Tween_animation.dart';
 import 'package:demo/Animation/animation.dart';
 import 'package:demo/Clip_RRect.dart';
 import 'package:demo/Gradient.dart';
+import 'package:demo/Login%20using%20Sharred%20Preference/Login.dart';
 import 'package:demo/Mapping_list.dart';
 import 'package:demo/Range_Slider.dart';
 import 'package:demo/Shared_Preference.dart';
 import 'package:demo/introfile.dart';
 import 'package:demo/my_profile.dart';
-import 'package:demo/spalash_page.dart';
+import 'package:demo/spalash_page.dart' hide SpalashPage;
 import 'package:demo/stateful_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -34,7 +35,8 @@ class MyApp extends StatelessWidget {
           headlineSmall: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
       ),
-      home: SharedPreference(),
+      home: SpalashPage(),
+      // SharedPreference(),
       // RippleEffect(),
       // TweenAnimation(),
       // MappingList(),
