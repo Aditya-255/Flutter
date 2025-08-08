@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Counter/counter.dart';
+import 'package:flutter_application_1/Counter/counter_Screen.dart';
 // import 'package:flutter_application_1/bmi_calc.dart';
 // import 'package:flutter_application_1/login_page.dart';
 // import 'package:flutter_application_1/nodes_app/screens/notes_screen.dart';
