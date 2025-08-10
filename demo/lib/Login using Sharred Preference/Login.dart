@@ -44,7 +44,13 @@ class _LoginState extends State<Login> {
                 ),
               ),
               SizedBox(height: 20),
-              ElevatedButton(onPressed: () {}, child: Text("Login")),
+              ElevatedButton(
+                onPressed: () async {
+                  var sharedPref = await SharedPreferences.getInstance();
+                  sharedPref.setBool(_SpalashPageState.loginKey, true);
+                },
+                child: Text("Login"),
+              ),
             ],
           ),
         ),
@@ -54,8 +60,6 @@ class _LoginState extends State<Login> {
 }
 
 class SpalashPage extends StatefulWidget {
-  const SpalashPage({super.key});
-
   @override
   State<SpalashPage> createState() => _SpalashPageState();
 }
