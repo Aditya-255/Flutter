@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_nv/ExpandedFAB.dart';
 import 'package:flutter_nv/Login_page.dart';
 // import 'package:flutter_nv/calc.dart';
 // import 'package:flutter_nv/columnexp.dart';
@@ -20,11 +21,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: Scaffold(
-        body:
-            // Containercontain(),
-            // Colcontain(),
-            // calculator(),
-            LoginScreen(),
+        body: Expandedfab(),
+        // Containercontain(),
+        // Colcontain(),
+        // calculator(),
+        // LoginScreen(),
       ),
     );
   }
