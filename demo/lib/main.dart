@@ -4,6 +4,7 @@ import 'package:demo/Animation/Ripple_Effect.dart';
 import 'package:demo/Animation/Tween_animation.dart';
 import 'package:demo/Animation/animation.dart';
 import 'package:demo/Clip_RRect.dart';
+import 'package:demo/Database/Data/dbconnnection.dart';
 import 'package:demo/Gradient.dart';
 import 'package:demo/Login%20using%20Sharred%20Preference/Login.dart';
 import 'package:demo/Mapping_list.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    DBConnection db = DBConnection.getInstance();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
