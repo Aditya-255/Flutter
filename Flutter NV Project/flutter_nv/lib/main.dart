@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_nv/Currency_conveter.dart';
 import 'package:flutter_nv/ExpandedFAB.dart';
 import 'package:flutter_nv/Login_page.dart';
 // import 'package:flutter_nv/calc.dart';
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: Scaffold(
-        body: Expandedfab(),
+        body: CurrencyConveter(),
+        // Expandedfab(),
         // Containercontain(),
         // Colcontain(),
         // calculator(),
