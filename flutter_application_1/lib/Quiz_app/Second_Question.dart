@@ -4,7 +4,7 @@ import 'package:flutter_application_1/Quiz_app/Question.dart';
 
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key});
-
+//create flutter app to read api to dispaly dogs brief and display dog image 
   @override
   State<QuestionScreen> createState() => _QuestionScreenState();
 }
