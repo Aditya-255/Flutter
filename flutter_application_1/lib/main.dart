@@ -3,6 +3,7 @@ import 'package:flutter_application_1/Counter/counter_Screen.dart';
 import 'package:flutter_application_1/Counter/setting_screen.dart';
 import 'package:flutter_application_1/Dog%20APIS/callapi.dart';
 import 'package:flutter_application_1/Quiz_app/Start.dart';
+import 'package:flutter_application_1/Quiz_app/homepage.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 // import 'package:flutter_application_1/bmi_calc.dart';
 // import 'package:flutter_application_1/login_page.dart';
@@ -28,9 +29,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Ecom App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 61, 53, 74)),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 61, 53, 74),
+        ),
       ),
-      home: Callapi(),
+      home: QuizScreen(),
+      // Callapi(),
       // Start(),
       // SettingsScreen(),
       // Counter(),
