@@ -1,8 +1,6 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_nv/API/Model/Services/user_api.dart';
 import 'package:flutter_nv/API/Model/user.dart';
-import 'package:http/http.dart' as http;
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -13,6 +11,11 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List<User> users = [];
+  @override
+  void initState() {
+    super.initState();
+    fetchUser();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,30 +34,36 @@ class _HomeState extends State<Home> {
           );
         },
       ),
-      floatingActionButton: FloatingActionButton(onPressed: fetchUser),
     );
   }
 
-  Future<void> fetchUser() async {
-    print("fetch user call");
-    const url = 'https://randomuser.me/api/?results=5';
-    final uri = Uri.parse(url);
-    final response = await http.get(uri);
-    final body = response.body;
-    final json = jsonDecode(body);
-    final results = json['results'] as List<dynamic>;
-    final tran = results.map((e) {
-      return User(
-        cell: e['cell'],
-        email: e['email'],
-        gender: e['gender'],
-        nat: e['nat'],
-        phone: e['phone'],
-      );
-    }).toList();
+  void fetchUser() async {
+    final response = await UserApi.fetchUser();
     setState(() {
-      users = tran;
+      users = response;
     });
-    print("fetch user end");
   }
+
+  // Future<void> fetchUser() async {
+  //   print("fetch user call");
+  //   const url = 'https://randomuser.me/api/?results=5';
+  //   final uri = Uri.parse(url);
+  //   final response = await http.get(uri);
+  //   final body = response.body;
+  //   final json = jsonDecode(body);
+  //   final results = json['results'] as List<dynamic>;
+  //   final tran = results.map((e) {
+  //     return User(
+  //       cell: e['cell'],
+  //       email: e['email'],
+  //       gender: e['gender'],
+  //       nat: e['nat'],
+  //       phone: e['phone'],
+  //     );
+  //   }).toList();
+  //   setState(() {
+  //     users = tran;
+  //   });
+  //   print("fetch user end");
+  // }
 }
