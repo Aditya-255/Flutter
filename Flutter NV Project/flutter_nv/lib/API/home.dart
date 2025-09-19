@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
           final Color = user.gender == "male" ? Colors.blue : Colors.pink;
           return ListTile(
             title: Text(email),
-            subtitle: Text(user.cell),
+            subtitle: Text(user.location.state),
             tileColor: Color,
           );
         },
