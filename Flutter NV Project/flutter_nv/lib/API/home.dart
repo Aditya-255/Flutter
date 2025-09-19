@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_nv/API/Model/user.dart';
 import 'package:http/http.dart' as http;
 
 class Home extends StatefulWidget {
@@ -11,7 +12,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List<dynamic> users = [];
+  List<User> users = [];
 
   @override
   Widget build(BuildContext context) {
@@ -21,20 +22,12 @@ class _HomeState extends State<Home> {
         itemCount: users.length,
         itemBuilder: (context, index) {
           final user = users[index];
-          final name = user['name']['first'];
-          final email = user['email'];
-          final picture = user['picture']['thumbnail'];
+          final email = user.email;
+          final Color = user.gender == "male" ? Colors.blue : Colors.pink;
           return ListTile(
-            title: Text(name.toString()),
-            subtitle: Text(email),
-            leading: ClipRRect(
-              borderRadius: BorderRadius.circular(100),
-              child: Image.network(
-                picture,
-                errorBuilder: (context, error, stackTrace) =>
-                    Icon(Icons.person),
-              ),
-            ),
+            title: Text(email),
+            subtitle: Text(user.cell),
+            tileColor: Color,
           );
         },
       ),
@@ -49,8 +42,18 @@ class _HomeState extends State<Home> {
     final response = await http.get(uri);
     final body = response.body;
     final json = jsonDecode(body);
+    final results = json['results'] as List<dynamic>;
+    final tran = results.map((e) {
+      return User(
+        cell: e['cell'],
+        email: e['email'],
+        gender: e['gender'],
+        nat: e['nat'],
+        phone: e['phone'],
+      );
+    }).toList();
     setState(() {
-      users = json['results'];
+      users = tran;
     });
     print("fetch user end");
   }
