@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/login_page.dart';
+import 'package:flutter_nv/Firebase/login_page.dart';
 
 class SignUpPage extends StatefulWidget {
   static route() => MaterialPageRoute(

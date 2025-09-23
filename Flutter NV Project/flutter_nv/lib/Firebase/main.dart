@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/signup_page.dart';
+import 'package:flutter_nv/Firebase/signup_page.dart';
 
 void main() {
   runApp(const MyApp());
